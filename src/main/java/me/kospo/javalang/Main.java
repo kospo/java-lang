@@ -1,4 +1,7 @@
-package me.kospo.javalang.generics;
+package me.kospo.javalang;
+
+import me.kospo.javalang.generics.CountMap;
+import me.kospo.javalang.generics.CountMapImpl;
 
 public class Main {
     public static void main(String[] args) {
