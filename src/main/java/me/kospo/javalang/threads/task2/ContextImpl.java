@@ -54,8 +54,11 @@ public class ContextImpl implements Context {
 
     private synchronized void tryRunCallback() {
         if(isFinished() && shouldCallback) {
-            callback.run();
-            shouldCallback = false;
+            try {
+                callback.run();
+            } finally {
+                shouldCallback = false;
+            }
         }
     }
 
